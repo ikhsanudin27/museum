@@ -1,0 +1,282 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f4f4;
+    color: #2c3e50;
+    overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 60px;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.translate-btn {
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    background: #f5d38a;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.translate-btn:hover {
+    background: white;
+}
+
+.search-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#searchInput {
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: none;
+    font-size: 13px;
+    width: 200px;
+    outline: none;
+}
+
+.navbar nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #f5d38a;
+}
+
+/* ================= CONTENT ================= */
+.content {
+    display: none;
+    padding-top: 120px;
+    animation: fadeIn 0.5s ease;
+}
+
+.active {
+    display: block;
+}
+
+/* ================= HERO ================= */
+.hero {
+    height: 100vh;
+    background: url("bg1.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 58px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #f5d38a, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    letter-spacing: 2px;
+    opacity: 0.9;
+}
+
+/* ================= INSTAGRAM FLOAT ================= */
+.ig-float {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #e1306c, #f77737);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    z-index: 2000;
+}
+
+.ig-float:hover {
+    transform: scale(1.15);
+}
+
+/* ================= CARD SECTIONS ================= */
+#tentang,
+#maps,
+#quiz {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 50px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+/* ================= TENTANG IMAGE ================= */
+.tentang-image img {
+    width: 100%;
+    max-width: 750px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.2);
+}
+
+/* ================= ABOUT WITH VIDEO ================= */
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.about-text {
+    text-align: left;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.about-video iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* ================= MAP ================= */
+.map-container {
+    margin-top: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 420px;
+    border: none;
+}
+
+/* ================= QUIZ ================= */
+#quizContainer button {
+    margin: 12px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #34495e, #2c3e50);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#quizContainer button:hover {
+    transform: scale(1.08);
+    background: linear-gradient(45deg, #e67e22, #f39c12);
+}
+
+.quiz-explanation {
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 20px;
+    background: #f9f9f9;
+}
+
+.quiz-explanation img {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+.quiz-explanation button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h2 {
+        font-size: 36px;
+    }
+
+    .navbar {
+        padding: 18px 20px;
+    }
+
+    #searchInput {
+        width: 150px;
+    }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Museum Song Terus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="nav-container">
+
+        <div class="logo">
+            Museum Song Terus
+            <button class="translate-btn" onclick="toggleEnglish()">EN</button>
+        </div>
+
+        <div class="search-center">
+            <input type="text" id="searchInput" placeholder="Cari..." onkeyup="searchContent()">
+        </div>
+
+        <nav>
+            <a href="#" onclick="showSection('home')">Home</a>
+            <a href="#" onclick="showSection('tentang')">Tentang</a>
+            <a href="#" onclick="showSection('maps')">Maps</a>
+            <a href="#" onclick="showSection('quiz')">Quiz</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="content active hero">
+    <div class="hero-content">
+        <h2>Museum Song Terus</h2>
+        <p>Situs Arkeologi Penting di Pacitan, Jawa Timur</p>
+    </div>
+</section>
+
+<!-- INSTAGRAM FLOAT -->
+<a href="https://instagram.com/songterus_museum" target="_blank" class="ig-float">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="24">
+</a>
+
+<!-- TENTANG -->
+<section id="tentang" class="content">
+
+    <div class="tentang-image">
+        <img src="songterus.jpg">
+    </div>
+
+    <h2>Tentang Museum Song Terus</h2>
+
+    <div class="about-container">
+        <div class="about-text">
+            <p id="tentangText">
+                Museum ini menyimpan hasil penelitian arkeologi dari Gua Song Terus.
+            </p>
+        </div>
+
+        <div class="about-video">
+            <iframe 
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+</section>
+
+<!-- MAPS -->
+<section id="maps" class="content">
+    <h2>Lokasi Museum</h2>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps?q=Museum+Song+Terus+Pacitan&output=embed"></iframe>
+    </div>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz" class="content">
+    <h2>Quiz Museum</h2>
+    <div id="quizContainer"></div>
+    <div id="feedback"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
