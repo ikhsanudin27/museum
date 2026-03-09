@@ -1,88 +1,203 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Museum Song Terus</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Museum Song Terus</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="navbar">
-    <div class="nav-container">
+<div class="nav-container">
 
-        <div class="logo">
-            Museum Song Terus
-            <button class="translate-btn" onclick="toggleEnglish()">EN</button>
-        </div>
+<div class="logo">
+Museum Song Terus
 
-        <div class="search-center">
-            <input type="text" id="searchInput" placeholder="Cari..." onkeyup="searchContent()">
-        </div>
+<img id="langFlag"
+src="https://flagcdn.com/w40/id.png"
+class="flag-switch"
+onclick="toggleLanguage()">
 
-        <nav>
-            <a href="#" onclick="showSection('home')">Home</a>
-            <a href="#" onclick="showSection('tentang')">Tentang</a>
-            <a href="#" onclick="showSection('maps')">Maps</a>
-            <a href="#" onclick="showSection('quiz')">Quiz</a>
-        </nav>
+</div>
 
-    </div>
+<div class="search-center">
+<input type="text" id="searchInput" placeholder="Cari..." onkeyup="searchContent()">
+</div>
+
+<nav>
+<a href="#" onclick="showSection('home')">Home</a>
+<a href="#" onclick="showSection('tentang')">Tentang</a>
+<a href="#" onclick="showSection('maps')">Maps</a>
+<a href="#" onclick="showSection('quiz')">Quiz</a>
+</nav>
+
+</div>
 </header>
+
 
 <!-- HERO -->
 <section id="home" class="content active hero">
-    <div class="hero-content">
-        <h2>Museum Song Terus</h2>
-        <p>Situs Arkeologi Penting di Pacitan, Jawa Timur</p>
-    </div>
+
+<div class="hero-content">
+
+<h2 id="heroTitle">Museum Song Terus</h2>
+
+<p id="heroDesc">
+Situs Arkeologi Penting di Pacitan, Jawa Timur
+</p>
+
+<button id="heroBtn" class="hero-btn" onclick="showSection('tentang')">
+Jelajahi Museum
+</button>
+
+</div>
+
+<div class="scroll-down">↓</div>
+
 </section>
 
-<!-- INSTAGRAM FLOAT -->
+
+<!-- INFO CARDS -->
+<section class="home-info">
+
+<div class="info-card">
+<h3 id="info1Title">Situs Prasejarah</h3>
+<p id="info1Text">
+Song Terus merupakan salah satu situs arkeologi penting yang menyimpan bukti kehidupan manusia purba.
+</p>
+</div>
+
+<div class="info-card">
+<h3 id="info2Title">Lokasi</h3>
+<p id="info2Text">
+Museum ini terletak di Pacitan, Jawa Timur dan menjadi pusat penelitian prasejarah.
+</p>
+</div>
+
+<div class="info-card">
+<h3 id="info3Title">Penemuan Fosil</h3>
+<p id="info3Text">
+Berbagai alat batu dan fosil manusia purba ditemukan di kawasan Song Terus.
+</p>
+</div>
+
+</section>
+
+
+<!-- INSTAGRAM -->
 <a href="https://instagram.com/songterus_museum" target="_blank" class="ig-float">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="24">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="24">
 </a>
 
-<!-- TENTANG -->
+
+<!-- ================= ABOUT ================= -->
 <section id="tentang" class="content">
 
-    <div class="tentang-image">
-        <img src="songterus.jpg">
-    </div>
+<h2 id="tentangTitle">Tentang Museum Song Terus</h2>
 
-    <h2>Tentang Museum Song Terus</h2>
+<div class="about-slider">
 
-    <div class="about-container">
-        <div class="about-text">
-            <p id="tentangText">
-                Museum ini menyimpan hasil penelitian arkeologi dari Gua Song Terus.
-            </p>
-        </div>
+<!-- ===== SLIDE 1 ===== -->
+<div class="about-slide active">
 
-        <div class="about-video">
-            <iframe 
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </div>
+<div class="tentang-image">
+<img src="songterus.jpg">
+</div>
+
+<div class="about-text">
+
+<p id="tentangText1" class="about-highlight"></p>
+
+<p id="tentangText2"></p>
+<p id="tentangText3"></p>
+
+<h3 id="sejarahTitle"></h3>
+
+<p id="sejarahText1"></p>
+<p id="sejarahText2"></p>
+<p id="sejarahText3"></p>
+
+<h3 id="koleksiTitle"></h3>
+
+<ul class="about-list">
+<li id="koleksi1"></li>
+<li id="koleksi2"></li>
+<li id="koleksi3"></li>
+<li id="koleksi4"></li>
+<li id="koleksi5"></li>
+</ul>
+
+<h3 id="fungsiTitle"></h3>
+
+<ul class="about-list">
+<li id="fungsi1"></li>
+<li id="fungsi2"></li>
+<li id="fungsi3"></li>
+<li id="fungsi4"></li>
+<li id="fungsi5"></li>
+</ul>
+
+<h3 id="menarikTitle"></h3>
+
+<ul class="about-list">
+<li id="menarik1"></li>
+<li id="menarik2"></li>
+<li id="menarik3"></li>
+<li id="menarik4"></li>
+</ul>
+
+</div>
+</div> <!-- PENUTUP SLIDE 1 -->
+
+
+<!-- ===== SLIDE 2 ===== -->
+<div class="about-slide">
+
+<div class="about-video">
+
+<video controls>
+<source src="contoh1.mp4" type="video/mp4">
+</video>
+
+</div>
+
+</div> <!-- PENUTUP SLIDE 2 -->
+
+</div>
+
+
+<div class="about-controls">
+<button onclick="prevAbout()">❮</button>
+<button onclick="nextAbout()">❯</button>
+</div>
 
 </section>
 
-<!-- MAPS -->
+
+<!-- ================= MAP ================= -->
 <section id="maps" class="content">
-    <h2>Lokasi Museum</h2>
-    <div class="map-container">
-        <iframe src="https://www.google.com/maps?q=Museum+Song+Terus+Pacitan&output=embed"></iframe>
-    </div>
+
+<h2>Lokasi Museum</h2>
+
+<div class="map-container">
+<iframe src="https://www.google.com/maps?q=Museum+Song+Terus+Pacitan&output=embed"></iframe>
+</div>
+
 </section>
 
-<!-- QUIZ -->
+
+<!-- ================= QUIZ ================= -->
 <section id="quiz" class="content">
-    <h2>Quiz Museum</h2>
-    <div id="quizContainer"></div>
-    <div id="feedback"></div>
+
+<h2>Quiz Museum</h2>
+
+<div id="quizContainer"></div>
+<div id="feedback"></div>
+
 </section>
+
 
 <script src="script.js"></script>
+
 </body>
 </html>
